@@ -11,11 +11,24 @@ import { StyleSheet, } from 'react-native';
 import { createStackNavigator, createAppContainer } from "react-navigation";
 
 import { HomePage } from './src/pages/Home.js';
+import { FlatlistPage } from './src/pages/Flatlist.js';
+import { ModalPage } from './src/pages/Modal.js';
+import { ProgressBarPage } from './src/pages/ProgressBar';
 
 const Pages = createStackNavigator({
+  ProgressBar: {
+    screen: ProgressBarPage
+  },
   Home: {
     screen: HomePage
-  }
+  },
+  Flatlist: {
+    screen: FlatlistPage
+  },
+  Modal: {
+    screen: ModalPage
+  },
+
 });
 
 
@@ -26,7 +39,6 @@ class App extends Component<{}> {
     );
   }
 }
-
 
 
 const styles = StyleSheet.create({
